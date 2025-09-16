@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ËiVORAK Bot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ËiVORAK Bot - Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      position: relative;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    /* Marca d'água */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('./EiVORAK.png') no-repeat center center;
+      background-size: 60%;
+      opacity: 0.06;
+      z-index: 0;
+      pointer-events: none; /* Para não interferir em cliques */
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 40px;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .lang-switch {
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy for ËiVORAK Bot</h1>
-    <p>We respect your privacy. Any data collected by this bot (e.g., messages you send) is used solely to provide responses and improve the bot's functionality. No personal data will be shared with third parties.</p>
-    <p>If you have any questions, contact: <a href="mailto:Edivaldotc16@gmail.com">Edivaldotc16@gmail.com.com</a></p>
+  <div class="container">
+    <img src="./EiVORAK.png" alt="ËiVORAK Logo" class="logo">
+    <h1 id="title">Privacy Policy for ËiVORAK Bot</h1>
+    <p id="text">
+      We respect your privacy. Any data collected by this bot (e.g., messages you send) is used solely 
+      to provide responses and improve the bot's functionality. No personal data will be shared with third parties.
+    </p>
+    <p id="contact">If you have any questions, contact: <b>Edivaldotc16@gmail.com</b></p>
+
+    <div class="lang-switch">
+      <button onclick="toggleLanguage()">🇬🇧 English / 🇧🇷 Português</button>
+    </div>
+  </div>
+
+  <script>
+    let isEnglish = true;
+    function toggleLanguage() {
+      if (isEnglish) {
+        document.getElementById("title").innerText = "Política de Privacidade do Bot ËiVORAK";
+        document.getElementById("text").innerText =
+          "Nós respeitamos a sua privacidade. Qualquer dado coletado por este bot (ex.: mensagens que você envia) " +
+          "é usado apenas para fornecer respostas e melhorar a funcionalidade do bot. Nenhum dado pessoal será compartilhado com terceiros.";
+        document.getElementById("contact").innerHTML =
+          "Se tiver alguma dúvida, entre em contato: <b>Edivaldotc16@gmail.com</b>";
+      } else {
+        document.getElementById("title").innerText = "Privacy Policy for ËiVORAK Bot";
+        document.getElementById("text").innerText =
+          "We respect your privacy. Any data collected by this bot (e.g., messages you send) is used solely " +
+          "to provide responses and improve the bot's functionality. No personal data will be shared with third parties.";
+        document.getElementById("contact").innerHTML =
+          "If you have any questions, contact: <b>Edivaldotc16@gmail.com</b>";
+      }
+      isEnglish = !isEnglish;
+    }
+  </script>
 </body>
 </html>
- 
